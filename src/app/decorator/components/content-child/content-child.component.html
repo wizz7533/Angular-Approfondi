@@ -4,4 +4,20 @@
     </h1>
 </header>
 
-<app-list-user></app-list-user> <!-- directive -->
+
+<p>Pour faire afficher le contenu fourni à une directive de composant, on utilise la directive 
+    <code>&lt;ng-content>&lt;/ng-content></code>
+</p>
+
+<p>Exercice</p>
+<p>Créer un composant Angular (alert) qui affiche une alert de bootstrap <br />
+Rendre parametrable la classe css qui affichera la couleur</p>
+
+<app-alert >Hello World !!</app-alert>
+<app-alert type="danger">Yaha !!!</app-alert>
+<app-alert type="warning">
+    <h4>Hola</h4>
+    <hr />
+    <p>Et voila</p>
+</app-alert>
+<app-alert type="success">Adiu !!</app-alert>
