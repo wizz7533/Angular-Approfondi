@@ -5,12 +5,18 @@ import { DecoratorRoutingModule } from './decorator-routing.module';
 import { DecoratorComponent } from './decorator.component';
 import { TodolistComponent } from './components/todolist/todolist.component';
 import { FormsModule } from '@angular/forms';
+import { ViewChildComponent } from './components/view-child/view-child.component';
+import { ListUserComponent } from './components/list-user/list-user.component';
+import { ContentChildComponent } from './components/content-child/content-child.component';
 
 
 @NgModule({
   declarations: [
     DecoratorComponent,
-    TodolistComponent
+    TodolistComponent,
+    ViewChildComponent,
+    ListUserComponent,
+    ContentChildComponent
   ],
   imports: [
     CommonModule,

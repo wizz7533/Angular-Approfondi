@@ -1,5 +1,4 @@
-import { ValueConverter } from '@angular/compiler/src/render3/view/template';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -11,6 +10,9 @@ export class TodolistComponent implements OnInit {
 
   task: string = '';
   tasks: string[] = [];
+
+  // static : true -> permet de faire référence à l'élément avant le chargement dela vue
+  @ViewChild('inputElement', { static : true }) inputRef?: ElementRef;
 
   constructor(private title: Title) { }
 
@@ -24,6 +26,7 @@ export class TodolistComponent implements OnInit {
     if ('' != this.task.trim()) {
       this.tasks.push(this.task);
       this.task = '';
+      this.inputRef!.nativeElement.focus();
     }
   }
 

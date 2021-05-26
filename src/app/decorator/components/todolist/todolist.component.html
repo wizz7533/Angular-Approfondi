@@ -6,7 +6,7 @@
 
 <section>
     <div>
-        <input type="text" class="form-control" placeholder="Entrez votre tâche" [(ngModel)]="task" (keyup.enter)="addTask()" />
+        <input type="text" class="form-control" placeholder="Entrez votre tâche" [(ngModel)]="task" (keyup.enter)="addTask()" #inputElement />
         <button class="btn btn-outline-primary" (click)="addTask()">Ajouter</button>
     </div>
 
