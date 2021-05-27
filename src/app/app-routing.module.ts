@@ -9,7 +9,11 @@ const routes: Routes = [
     path: 'decorator', loadChildren: () => import('./decorator/decorator.module').then(m => m.DecoratorModule),
     data: { preload: true }
   },
-    { path: 'profile', loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule) }
+    { path: 'profile', loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule) },
+  {
+    path: 'product', loadChildren: () => import('./product/product.module').then(m => m.ProductModule),
+    data: { preload: true }
+  }
 ];
 
 @NgModule({
